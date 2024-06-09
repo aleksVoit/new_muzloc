@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update profile of user</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <script>
+        account_id = "{{ account_id }}";
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Профиль пользователя с ID: {{ account_id }}</h1>
+        </header>
+        <section id="login">
+            <h2>Profile Info</h2>
+            <form id="profile-form">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" > <!--required-->
+                <label for="bio">About me:</label>
+                <input type="text" id="bio" name="bio" > <!--required-->
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" > <!--required-->
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo" > <!--required-->
+                <label for="music">Music:</label>
+                <input type="text" id="music" name="music" > <!--required-->
+                <label for="video">Video:</label>
+                <input type="text" id="video" name="video" > <!--required-->
+                <label for="post">Post:</label>
+                <input type="text" id="post" name="post" > <!--required-->
+
+                <button type="submit" name="action" value="update">Update</button>
+            </form>
+        </section>
+        <footer>
+            <p>&copy; 2024 Платформа для музыкантов, аниматоров и организаторов мероприятий</p>
+        </footer>
+    </div>
+    <script src="../static/edit_profile.js"></script>
+</body>
+</html>

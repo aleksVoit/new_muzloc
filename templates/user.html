@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <link rel="stylesheet" href="../static/user_styles.css">
+    <script>
+        const account_id = "{{ account_id }}";
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+
+            <h1>Профиль пользователя с ID: {{ account_id }}</h1>
+            <h2 id="username">{{ username }}</h2>
+
+
+        </header>
+
+        <section id="profile">
+            <h2>Profile Info</h2>
+            <div id="profile-info">
+                <form id="edit_profile_button">
+                    <button id="to_edit_profile" type="submit" name="action" value="update">Update Profile</button>
+                </form>
+
+                <img src="static/user-photo.jpg" alt="Фото пользователя" id="profile-photo">
+                <p id="about-me">
+                    <strong>О себе:</strong> <br>
+                    Это пример текста, описывающий пользователя. Здесь можно рассказать о себе, своих увлечениях и достижениях.
+                </p>
+            </div>
+        </section>
+        <section id="media">
+            <div id="videos">
+                <h2>Видео</h2>
+                <div class="media-item">
+                    <video controls>
+                        <source src="static/video1.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <p>Описание видео 1</p>
+                </div>
+                <div class="media-item">
+                    <video controls>
+                        <source src="static/video2.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <p>Описание видео 2</p>
+                </div>
+            <!-- Добавьте больше видео по мере необходимости -->
+            </div>
+            <div id="music">
+                <h2>Музыкальные записи</h2>
+                <div class="media-item">
+                    <audio controls>
+                        <source src="static/music1.mp3" type="audio/mpeg">
+                        Ваш браузер не поддерживает аудио.
+                    </audio>
+                    <p>Описание музыкальной записи 1</p>
+                </div>
+                <div class="media-item">
+                    <audio controls>
+                        <source src="static/music2.mp3" type="audio/mpeg">
+                        Ваш браузер не поддерживает аудио.
+                    </audio>
+                    <p>Описание музыкальной записи 2</p>
+                </div>
+            <!-- Добавьте больше музыкальных записей по мере необходимости -->
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2024 Платформа для музыкантов, аниматоров и организаторов мероприятий</p>
+        </footer>
+    </div>
+    <script src="../static/user.js"></script>
+</body>
+</html>
